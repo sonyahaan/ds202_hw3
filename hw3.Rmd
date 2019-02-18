@@ -1,0 +1,32 @@
+---
+title: 'Homework #3'
+author: "Sonya Haan; sonyahaan"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tips at Restaurants
+
+Load the data set:
+```{r}
+data(tips, package="reshape2")
+```
+The information contained in the data is collected by one waiter, who recorded over the course of a season information about each tip he received working in one restaurant. See `?tips` for a description of all of the variables. 
+
+**Submission instructions**: Create a folder named `ds202_hw3`, and name the RMarkDown file including your solutions `hw3.Rmd` under this folder. For submission, create a GitHub repository named `ds202_hw3` under your GitHub account, and push both `hw3.Rmd` and the knitted `hw3.html` before the deadline. I will assume you use the same GitHub username as for your HW2 submission. The latest version of your homework appearing on GitHub before the deadline is graded. *It is crucial to follow the exact folder structure and file names*, so that your homework can be reproduced and graded by an automated script. This homework is **due on Feb 19** before class.
+
+1.  How many parties did the waiter serve? Store the number in `numParty` and print. 
+1. What are the types of variables in the data frame `tips`? 
+1. Create a vector named `day` containing the day of visits in `tips`. The factor levels should be ordered from Thursday to Sunday. Also print the variable.
+1. Create a data frame named `female5` containing the meal paid by a female payer in a  party with size greater than or euqal to 5. Also print the data frame.
+1. How does the tipping amount (`tip`) depend on the overall bill (`total_bill`)? Describe the relationship in words. Describe at least two types of anomalies in the plot. What do they mean? Use the `ggplot2` package to make a chart.
+1. Introduce a variable `tiprate` into the data set, that incorporates the rate of tips. What is the average rate for tips?
+1. Make a boxplot of the tip rate by time. The x-axis should be ordered by lunch and then dinner. Use the `ggplot2` package to make a chart.
+1. How does smoking behavior and gender of the person who pays impact the  relationship between tip and total bill? Find a visualization that incorporates all four variables. Interpret the result.
+1. Use ggplot2 to find a graphical summary of the relationship between day of the week and gender of the person paying the bill. What can you say about this relationship?
+
+Note: your submission is supposed to be fully reproducible, i.e. the TA and I will 'knit' your submission in RStudio. 
+
